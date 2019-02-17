@@ -1,12 +1,14 @@
-﻿<html>
+<html>
 <head>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 body {
     background-image: linear-gradient(to right, #414346, #38404d, #303c53, #2a3859, #25335e);
     width: auto;
@@ -16,14 +18,18 @@ body {
 	margin: 0;
     
 }
- 
+ .header {
+  padding: 10px 16px;
+  background: rgb(55,55,55);
+  color: #f1f1f1;
+}
 #name{
     width: 60px;
     height: 1px;
     position: relative;
 	font-weight:bold;
     text-align: center;
-    margin-left:30%;
+    margin-left:32%;
     white-space: nowrap;
     font-size: 24px;
     color:#D4DCC6;
@@ -36,18 +42,18 @@ body {
     -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
     -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 3s;    
+    animation-duration: 4s;    
     animation-fill-mode: forwards;
 	
 }
 @-webkit-keyframes example {
     from {top: 0px;}
-    to {top: 50px;}
+    to {top: 40px;}
 }
 
 @keyframes example {
     from {top: 0px;}
-    to {top: 50px;}
+    to {top: 40px;}
 }
 
 .tab {
@@ -492,15 +498,163 @@ display:flex;
   background: #125688;
   color: white;
 }
+#social {
+  margin: 20px 10px;
+  text-align: center;
+}
+.smGlobalBtn { /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border:2px solid #ddd; /* add border to the buttons */
+    box-shadow: 0 3px 3px #999;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius:27px;
+    -webkit-border-radius:27px;
+}
+
+/* facebook button class*/
+.facebookBtn{
+    background: #4060A5;
+}
+
+.facebookBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebookBtn:hover{
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
+
+/* twitter button class*/
+.twitterBtn{
+    background: #00ABE3;
+}
+
+.twitterBtn:before{
+      font-family: "FontAwesome";
+      content: "\f099"; /* add twitter icon */
+      
+}
+
+.twitterBtn:hover{
+      color: #00ABE3;
+      background: #fff;
+      border-color: #00ABE3;
+}
+
+/* google plus button class*/
+.googleplusBtn{
+    background: #e64522;
+}
+
+.googleplusBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0d5"; /* add googleplus icon */
+}
+
+.googleplusBtn:hover{
+      color: #e64522;
+      background: #fff;
+      border-color: #e64522;
+}
+
+/* linkedin button class*/
+.linkedinBtn{
+    background: #0094BC;
+}
+
+.linkedinBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0e1"; /* add linkedin icon */
+}
+
+.linkedinBtn:hover{
+      color: #0094BC;
+      background: #fff;
+      border-color: #0094BC;
+}
+
+/* pinterest button class*/
+.pinterestBtn{
+    background: #cb2027;
+}
+
+.pinterestBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0d2"; /* add pinterest icon */
+}
+
+.pinterestBtn:hover{
+      color: #cb2027;
+      background: #fff;
+      border-color: #cb2027;
+}
+
+/* tumblr button class*/
+.tumblrBtn{
+    background: #3a5876;
+}
+
+.tumblrBtn:before{
+      font-family: "FontAwesome";
+      content: "\f173"; /* add tumblr icon */
+}
+
+.tumblrBtn:hover{
+      color: #3a5876;
+      background: #fff;
+      border-color: #3a5876;
+}
+
+/* rss button class*/
+.rssBtn{
+    background: #e88845;
+}
+
+.rssBtn:before{
+      font-family: "FontAwesome";
+      content: "\f09e"; /* add rss icon */
+}
+
+.rssBtn:hover{
+      color: #e88845;
+      background: #fff;
+      border-color: #e88845;
+}
+.gap{
+   margin-left:10px;
+   margin-right:10px;
+}
 </style>
 </head>
 <body >
 <header style="background-size: 100%;background-repeat: no-repeat;background-size: cover;margin-left: 0px;margin-right: 0px; height:25vh; ">
+<div class="header" id="myHeader">
+ <div style="  text-align: center;">
+  <a href="#home" class="gap">Home</a>
+  <a href="#imagea" class="gap">Education</a>
+  <a href="#imageb" class="gap">Experience</a>
+  <a href="#foot" class="gap">Contact</a>
+ </div>
+</div>
 <div>
 <div>
-<p id="name"> ARAVINDHU DHANAPANDI</p>
-<p id="name">-------------------</p>
-<p id="name">FRONT END DEVELOPER</p>
+<p id="name" > ARAVINDHU DHANAPANDI</p>
+<!-- <p id="name">-------------------</p> -->
+<!-- <p id="name">FRONT END DEVELOPER</p> -->
 </div>
 </div >
 </header>
@@ -520,11 +674,11 @@ display:flex;
       </div>
 	  
 	  <div class="item">
-        <img src="night_city.jpg" alt="Paris" height="200px;" width="100%;">
+        <img src="brooklyn1.jpg" alt="Paris" height="200px;" width="100%;">
       </div>
     
       <div class="item">
-        <img src="trolley1.jpg" alt="Paris" height="200px;" width="100%;">
+        <img src="cityscape.jpg" alt="Paris" height="200px;" width="100%;">
       </div>
 	  
 	  
@@ -568,7 +722,6 @@ display:flex;
   <h3>Bachelor Degree</h3>
   <a href="https://www.annauniv.edu/" style="color:red">Homepage</a>
   <p>•Bachelor of Engineering in Electronics & Instrumentation</p>
-  <p>•Grade 71%</p>
   <p>•GPA 2:1</p>
 </div>
 
@@ -589,8 +742,8 @@ display:flex;
   <article>
     <div class="inner">
       <span class="date">
-        <span class="day">1<sup>st</sup></span>
-        <span class="month">Sep</span>
+        <span class="day">21<sup>st</sup></span>
+        <span class="month">Dec</span>
         <span class="year">2018</span>
       </span>
       <h2>UI/UX Developer</h2>
@@ -659,8 +812,8 @@ Assures completion of patient registration and any other required hospital docum
     </div>
   </article>
 </section>
-<footer>
-<h1 style="color:white; margin-left:30px;">CONTACT</h1>
+<footer id="foot">
+<h1 style="font-family:Comic Sans MS;color:white; margin-left:30px;">CONTACT</h1>
     <div class="foot">
        <img src="ABlogo.png">
        <span style="color:white;">
@@ -674,19 +827,23 @@ Assures completion of patient registration and any other required hospital docum
          <li>Dublin-20</li>
       </ul>
       </span>
-<ul>
-<li>
-<hr align="left" width="50%" style="margin-left:100px; margin-bottom:100px; margin-right:0"></li>
-<li style="margin-left:250px;"><a href="https://www.facebook.com/aravindhu.bala" class="fa fa-facebook"></a>
+<ul> 
+ <li> 
+<hr align="left" width="50%" style="margin-left:100px; margin-bottom:100px; margin-right:0"></li> 
+ <li style="margin-left:250px;"><a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/aravindhu.bala" ></a> 
+ <a class="twitterBtn smGlobalBtn" href="#" ></a>
+  <a class="googleplusBtn smGlobalBtn" href="https://plus.google.com/u/0/107911678518920293249" ></a> 
+  <a class="linkedinBtn smGlobalBtn" href="www.linkedin.com/in/aravindhu-balaji-dhanapandi-9a580a119" ></a> 
+  <a class="pinterestBtn smGlobalBtn" href="#" ></a> 
+  <a class="tumblrBtn smGlobalBtn" href="#" ></a> 
+  <a class="rssBtn smGlobalBtn" href="#" ></a> 
+</li> 
+ </ul> 
 
-<a href="https://plus.google.com/u/0/107911678518920293249" class="fa fa-google"></a>
-<a href="www.linkedin.com/in/aravindhu-balaji-dhanapandi-9a580a119" class="fa fa-linkedin"></a>
-
-<a href="#" class="fa fa-instagram"></a>
-</li>
-</ul>
+	
 <h3 style="color:white; position:relative; top:-10px; right:70px; margin-left:0 ;margin-right:2px;">Connect</h3>
 <hr align="left" width="20%">
+
      </div> 
 
 </footer>
